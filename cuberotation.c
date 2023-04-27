@@ -61,20 +61,63 @@ int main(){
     mainCube->width = 160;
     mainCube->height = 44;
     mainCube->backgroundChar = ' ';
-    mainCube->FOV = 100;
+    mainCube->FOV = 150;
     float zBuff[mainCube->width * mainCube->height];
     char charBuff[mainCube->width * mainCube->height];
     mainCube->xOffset = 0;
     mainCube->K1 = 40;
-    mainCube->acceleration = 0.6;
+    mainCube->acceleration = 0.8;
 
     float origCubeWidth = mainCube->cubeWidth;
     while(1){
         memset(zBuff, 0, mainCube->width * mainCube->height * 4);
         memset(charBuff, mainCube->backgroundChar, mainCube->width * mainCube->height);
         mainCube->cubeWidth = origCubeWidth;
-        mainCube->xOffset = -2 * mainCube->cubeWidth;
+        mainCube->xOffset = -3 * mainCube->cubeWidth;
         
+        for (float cubeX = -(mainCube->cubeWidth); cubeX < mainCube->cubeWidth; cubeX += mainCube->acceleration) {
+            for (float cubeY = -(mainCube->cubeWidth); cubeY < mainCube->cubeWidth;
+                cubeY += mainCube->acceleration) {
+                calcSurface(cubeX, cubeY, -(mainCube->cubeWidth), zBuff, charBuff, mainCube, '@');
+                calcSurface(mainCube->cubeWidth, cubeY, cubeX,  zBuff, charBuff, mainCube, '$');
+                calcSurface(-(mainCube->cubeWidth), cubeY, -cubeX,  zBuff, charBuff, mainCube, '~');
+                calcSurface(-cubeX, cubeY, mainCube->cubeWidth,  zBuff, charBuff, mainCube, '#');
+                calcSurface(cubeX, -(mainCube->cubeWidth), -cubeY,  zBuff, charBuff, mainCube, ';');
+                calcSurface(cubeX, mainCube->cubeWidth, cubeY,  zBuff, charBuff, mainCube, '+');
+            }
+        }
+
+
+        mainCube->cubeWidth = 15;
+        mainCube->xOffset = -1 * mainCube->cubeWidth;
+        for (float cubeX = -(mainCube->cubeWidth); cubeX < mainCube->cubeWidth; cubeX += mainCube->acceleration) {
+            for (float cubeY = -(mainCube->cubeWidth); cubeY < mainCube->cubeWidth;
+                cubeY += mainCube->acceleration) {
+                calcSurface(cubeX, cubeY, -(mainCube->cubeWidth), zBuff, charBuff, mainCube, '@');
+                calcSurface(mainCube->cubeWidth, cubeY, cubeX,  zBuff, charBuff, mainCube, '$');
+                calcSurface(-(mainCube->cubeWidth), cubeY, -cubeX,  zBuff, charBuff, mainCube, '~');
+                calcSurface(-cubeX, cubeY, mainCube->cubeWidth,  zBuff, charBuff, mainCube, '#');
+                calcSurface(cubeX, -(mainCube->cubeWidth), -cubeY,  zBuff, charBuff, mainCube, ';');
+                calcSurface(cubeX, mainCube->cubeWidth, cubeY,  zBuff, charBuff, mainCube, '+');
+            }
+        }
+
+        mainCube->cubeWidth = 10;
+        mainCube->xOffset = 2 * mainCube->cubeWidth;
+        for (float cubeX = -(mainCube->cubeWidth); cubeX < mainCube->cubeWidth; cubeX += mainCube->acceleration) {
+            for (float cubeY = -(mainCube->cubeWidth); cubeY < mainCube->cubeWidth;
+                cubeY += mainCube->acceleration) {
+                calcSurface(cubeX, cubeY, -(mainCube->cubeWidth), zBuff, charBuff, mainCube, '@');
+                calcSurface(mainCube->cubeWidth, cubeY, cubeX,  zBuff, charBuff, mainCube, '$');
+                calcSurface(-(mainCube->cubeWidth), cubeY, -cubeX,  zBuff, charBuff, mainCube, '~');
+                calcSurface(-cubeX, cubeY, mainCube->cubeWidth,  zBuff, charBuff, mainCube, '#');
+                calcSurface(cubeX, -(mainCube->cubeWidth), -cubeY,  zBuff, charBuff, mainCube, ';');
+                calcSurface(cubeX, mainCube->cubeWidth, cubeY,  zBuff, charBuff, mainCube, '+');
+            }
+        }
+
+        mainCube->cubeWidth = 6;
+        mainCube->xOffset = 8 * mainCube->cubeWidth;
         for (float cubeX = -(mainCube->cubeWidth); cubeX < mainCube->cubeWidth; cubeX += mainCube->acceleration) {
             for (float cubeY = -(mainCube->cubeWidth); cubeY < mainCube->cubeWidth;
                 cubeY += mainCube->acceleration) {
