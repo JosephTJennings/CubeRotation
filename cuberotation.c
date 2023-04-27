@@ -36,7 +36,7 @@ float calcZ(int i, int j, int k) {
     return k * cos(A) * cos(B) - j * sin(A) * cos(B) + i * sin(B);
 }
 
-void calcSurface(float cubeX, float cubeY, float cubeZ, float* zBuff, int* charBuff, cube_t* mainCube, int ch) {
+void calcSurface(float cubeX, float cubeY, float cubeZ, float* zBuff, char* charBuff, cube_t* mainCube, int ch) {
     mainCube->x = calcX(cubeX, cubeY, cubeZ);
     mainCube->y = calcY(cubeX, cubeY, cubeZ);
     mainCube->z = calcZ(cubeX, cubeY, cubeZ) + mainCube->FOV;
@@ -78,12 +78,12 @@ int main(){
         for (float cubeX = -(mainCube->cubeWidth); cubeX < mainCube->cubeWidth; cubeX += mainCube->acceleration) {
             for (float cubeY = -(mainCube->cubeWidth); cubeY < mainCube->cubeWidth;
                 cubeY += mainCube->acceleration) {
-                calcSurface(cubeX, cubeY, -(mainCube->cubeWidth), &zBuff, &charBuff, mainCube, '@');
-                calcSurface(mainCube->cubeWidth, cubeY, cubeX,  &zBuff, &charBuff, mainCube, '$');
-                calcSurface(-(mainCube->cubeWidth), cubeY, -cubeX,  &zBuff, &charBuff, mainCube, '~');
-                calcSurface(-cubeX, cubeY, mainCube->cubeWidth,  &zBuff, &charBuff, mainCube, '#');
-                calcSurface(cubeX, -(mainCube->cubeWidth), -cubeY,  &zBuff, &charBuff, mainCube, ';');
-                calcSurface(cubeX, mainCube->cubeWidth, cubeY,  &zBuff, &charBuff, mainCube, '+');
+                calcSurface(cubeX, cubeY, -(mainCube->cubeWidth), zBuff, charBuff, mainCube, '@');
+                calcSurface(mainCube->cubeWidth, cubeY, cubeX,  zBuff, charBuff, mainCube, '$');
+                calcSurface(-(mainCube->cubeWidth), cubeY, -cubeX,  zBuff, charBuff, mainCube, '~');
+                calcSurface(-cubeX, cubeY, mainCube->cubeWidth,  zBuff, charBuff, mainCube, '#');
+                calcSurface(cubeX, -(mainCube->cubeWidth), -cubeY,  zBuff, charBuff, mainCube, ';');
+                calcSurface(cubeX, mainCube->cubeWidth, cubeY,  zBuff, charBuff, mainCube, '+');
             }
         }
         printf("\x1b[H");
