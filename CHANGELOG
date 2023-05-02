@@ -1,0 +1,61 @@
+commit e8121cda3328c96dd8ebd73c8a16b8bc3d7d21e1
+Author: Joseph Jennings <josephjenningsct@gmail.com>
+Date:   Tue May 2 00:03:28 2023 -0500
+
+    Added README
+
+commit e5bc603b6ff0729b5a2bd674138f55f30a7414cd
+Author: Joseph Jennings <josephjenningsct@gmail.com>
+Date:   Tue May 2 00:01:42 2023 -0500
+
+    Clarified some lines
+
+commit df539205f98b80259b7c8fe8e9b977df65e182f2
+Author: Joseph Jennings <josephjenningsct@gmail.com>
+Date:   Tue May 2 00:00:13 2023 -0500
+
+    Added comment for credit
+
+commit 05398bd0f0c1cd7db45fec3adc630c90e53ff384
+Author: Joseph Jennings <josephjenningsct@gmail.com>
+Date:   Mon May 1 23:53:22 2023 -0500
+
+    Added some comments for clarity
+
+commit fdb56961176795b68e928b2399bb2679157a88cf
+Author: Joseph Jennings <josephjenningsct@gmail.com>
+Date:   Mon May 1 23:50:10 2023 -0500
+
+    Updated ascii characters
+
+commit f4dd1fbe823e0e15244449675b26109584dabb55
+Author: Joseph Jennings <josephjenningsct@gmail.com>
+Date:   Mon May 1 23:39:10 2023 -0500
+
+    Fixed makefile
+
+commit 6120326ca04dda8cd642f23b8998f4309b26a2f5
+Author: josephTJennings <josephjenningsct@gmail.com>
+Date:   Thu Apr 27 12:13:17 2023 -0500
+
+    Added four cubes!
+
+commit 8d4c2e4c69095dfc2b57b186fd8a87afd5b40ac0
+Author: josephTJennings <josephjenningsct@gmail.com>
+Date:   Thu Apr 27 12:03:38 2023 -0500
+
+    Fixed calcSurface implementation!
+
+commit 8c341754d10984ae6f9f59f5609dcba0981d7a52
+Author: josephTJennings <josephjenningsct@gmail.com>
+Date:   Thu Apr 27 11:57:05 2023 -0500
+
+    Added a cube stuct and a broken implementation
+    of calculating surface area!
+
+commit c13b052a0dc07cba845ae7dd4e1edda4b46ea3d6
+Author: josephTJennings <josephjenningsct@gmail.com>
+Date:   Fri Apr 21 12:52:38 2023 -0500
+
+    Added transformations for X, Y, and Z dimensions.
+    Also added makefile and header.
