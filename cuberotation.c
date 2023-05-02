@@ -4,6 +4,8 @@
 #include <unistd.h>
 #include <stdlib.h>
 
+// credit to: https://www.youtube.com/watch?v=p4Iz0XJY-Qk for helping me understand how projecting works and how to build a 3D object in 2D
+
 float A, B, C; //3x1 matrix
 typedef struct cube {
     float cubeWidth;
