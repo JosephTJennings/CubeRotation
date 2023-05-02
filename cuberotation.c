@@ -6,7 +6,7 @@
 
 // credit to: https://www.youtube.com/watch?v=p4Iz0XJY-Qk for helping me understand how projecting works and how to build a 3D object in 2D
 
-float A, B, C; //3x1 matrix
+float A, B, C; //3x1 matrix, this will serve as the projection matrix
 typedef struct cube {
     float cubeWidth;
     int width;
@@ -22,18 +22,18 @@ typedef struct cube {
     int idx;
 }cube_t;
 
-float calcX(int i, int j, int k) { //calculating projecting matrix
+float calcX(int i, int j, int k) { //calculating rotation matrix for x
     return j * sin(A) * sin(B) * cos(C) - k * cos(A) * sin(B) * cos(C) +
          j * cos(A) * sin(C) + k * sin(A) * sin(C) + i * cos(B) * cos(C);
 }
 
-float calcY(int i, int j, int k) { //calculating projecting matrix
+float calcY(int i, int j, int k) { //calculating rotation matrix for y
     return j * cos(A) * cos(C) + k * sin(A) * cos(C) -
          j * sin(A) * sin(B) * sin(C) + k * cos(A) * sin(B) * sin(C) -
          i * cos(B) * sin(C);
 }
 
-float calcZ(int i, int j, int k) { //calculating projecting matrix
+float calcZ(int i, int j, int k) { //calculating rotation matrix for z
     return k * cos(A) * cos(B) - j * sin(A) * cos(B) + i * sin(B);
 }
 
