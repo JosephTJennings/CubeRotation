@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-float A, B, C;
+float A, B, C; //3x1 matrix
 typedef struct cube {
     float cubeWidth;
     int width;
@@ -20,22 +20,22 @@ typedef struct cube {
     int idx;
 }cube_t;
 
-float calcX(int i, int j, int k) {
+float calcX(int i, int j, int k) { //calculating projecting matrix
     return j * sin(A) * sin(B) * cos(C) - k * cos(A) * sin(B) * cos(C) +
          j * cos(A) * sin(C) + k * sin(A) * sin(C) + i * cos(B) * cos(C);
 }
 
-float calcY(int i, int j, int k) {
+float calcY(int i, int j, int k) { //calculating projecting matrix
     return j * cos(A) * cos(C) + k * sin(A) * cos(C) -
          j * sin(A) * sin(B) * sin(C) + k * cos(A) * sin(B) * sin(C) -
          i * cos(B) * sin(C);
 }
 
-float calcZ(int i, int j, int k) {
+float calcZ(int i, int j, int k) { //calculating projecting matrix
     return k * cos(A) * cos(B) - j * sin(A) * cos(B) + i * sin(B);
 }
 
-void calcSurface(float cubeX, float cubeY, float cubeZ, float* zBuff, char* charBuff, cube_t* mainCube, int ch) {
+void calcSurface(float cubeX, float cubeY, float cubeZ, float* zBuff, char* charBuff, cube_t* mainCube, int ch) { // calculate the surface of the cube and its ascii
     mainCube->x = calcX(cubeX, cubeY, cubeZ);
     mainCube->y = calcY(cubeX, cubeY, cubeZ);
     mainCube->z = calcZ(cubeX, cubeY, cubeZ) + mainCube->FOV;
