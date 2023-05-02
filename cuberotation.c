@@ -5,7 +5,6 @@
 #include <stdlib.h>
 
 float A, B, C;
-
 typedef struct cube {
     float cubeWidth;
     int width;
@@ -78,12 +77,12 @@ int main(){
         for (float cubeX = -(mainCube->cubeWidth); cubeX < mainCube->cubeWidth; cubeX += mainCube->acceleration) {
             for (float cubeY = -(mainCube->cubeWidth); cubeY < mainCube->cubeWidth;
                 cubeY += mainCube->acceleration) {
-                calcSurface(cubeX, cubeY, -(mainCube->cubeWidth), zBuff, charBuff, mainCube, '@');
-                calcSurface(mainCube->cubeWidth, cubeY, cubeX,  zBuff, charBuff, mainCube, '$');
-                calcSurface(-(mainCube->cubeWidth), cubeY, -cubeX,  zBuff, charBuff, mainCube, '~');
-                calcSurface(-cubeX, cubeY, mainCube->cubeWidth,  zBuff, charBuff, mainCube, '#');
-                calcSurface(cubeX, -(mainCube->cubeWidth), -cubeY,  zBuff, charBuff, mainCube, ';');
-                calcSurface(cubeX, mainCube->cubeWidth, cubeY,  zBuff, charBuff, mainCube, '+');
+                calcSurface(cubeX, cubeY, -(mainCube->cubeWidth), zBuff, charBuff, mainCube, '-');
+                calcSurface(mainCube->cubeWidth, cubeY, cubeX,  zBuff, charBuff, mainCube, '/');
+                calcSurface(-(mainCube->cubeWidth), cubeY, -cubeX,  zBuff, charBuff, mainCube, '#');
+                calcSurface(-cubeX, cubeY, mainCube->cubeWidth,  zBuff, charBuff, mainCube, '+');
+                calcSurface(cubeX, -(mainCube->cubeWidth), -cubeY,  zBuff, charBuff, mainCube, ':');
+                calcSurface(cubeX, mainCube->cubeWidth, cubeY,  zBuff, charBuff, mainCube, '[');
             }
         }
 
@@ -93,12 +92,12 @@ int main(){
         for (float cubeX = -(mainCube->cubeWidth); cubeX < mainCube->cubeWidth; cubeX += mainCube->acceleration) {
             for (float cubeY = -(mainCube->cubeWidth); cubeY < mainCube->cubeWidth;
                 cubeY += mainCube->acceleration) {
-                calcSurface(cubeX, cubeY, -(mainCube->cubeWidth), zBuff, charBuff, mainCube, '@');
-                calcSurface(mainCube->cubeWidth, cubeY, cubeX,  zBuff, charBuff, mainCube, '$');
-                calcSurface(-(mainCube->cubeWidth), cubeY, -cubeX,  zBuff, charBuff, mainCube, '~');
-                calcSurface(-cubeX, cubeY, mainCube->cubeWidth,  zBuff, charBuff, mainCube, '#');
-                calcSurface(cubeX, -(mainCube->cubeWidth), -cubeY,  zBuff, charBuff, mainCube, ';');
-                calcSurface(cubeX, mainCube->cubeWidth, cubeY,  zBuff, charBuff, mainCube, '+');
+                calcSurface(cubeX, cubeY, -(mainCube->cubeWidth), zBuff, charBuff, mainCube, '-');
+                calcSurface(mainCube->cubeWidth, cubeY, cubeX,  zBuff, charBuff, mainCube, '/');
+                calcSurface(-(mainCube->cubeWidth), cubeY, -cubeX,  zBuff, charBuff, mainCube, '#');
+                calcSurface(-cubeX, cubeY, mainCube->cubeWidth,  zBuff, charBuff, mainCube, '+');
+                calcSurface(cubeX, -(mainCube->cubeWidth), -cubeY,  zBuff, charBuff, mainCube, ':');
+                calcSurface(cubeX, mainCube->cubeWidth, cubeY,  zBuff, charBuff, mainCube, '[');
             }
         }
 
@@ -107,12 +106,12 @@ int main(){
         for (float cubeX = -(mainCube->cubeWidth); cubeX < mainCube->cubeWidth; cubeX += mainCube->acceleration) {
             for (float cubeY = -(mainCube->cubeWidth); cubeY < mainCube->cubeWidth;
                 cubeY += mainCube->acceleration) {
-                calcSurface(cubeX, cubeY, -(mainCube->cubeWidth), zBuff, charBuff, mainCube, '@');
-                calcSurface(mainCube->cubeWidth, cubeY, cubeX,  zBuff, charBuff, mainCube, '$');
-                calcSurface(-(mainCube->cubeWidth), cubeY, -cubeX,  zBuff, charBuff, mainCube, '~');
-                calcSurface(-cubeX, cubeY, mainCube->cubeWidth,  zBuff, charBuff, mainCube, '#');
-                calcSurface(cubeX, -(mainCube->cubeWidth), -cubeY,  zBuff, charBuff, mainCube, ';');
-                calcSurface(cubeX, mainCube->cubeWidth, cubeY,  zBuff, charBuff, mainCube, '+');
+                calcSurface(cubeX, cubeY, -(mainCube->cubeWidth), zBuff, charBuff, mainCube, '-');
+                calcSurface(mainCube->cubeWidth, cubeY, cubeX,  zBuff, charBuff, mainCube, '/');
+                calcSurface(-(mainCube->cubeWidth), cubeY, -cubeX,  zBuff, charBuff, mainCube, '#');
+                calcSurface(-cubeX, cubeY, mainCube->cubeWidth,  zBuff, charBuff, mainCube, '+');
+                calcSurface(cubeX, -(mainCube->cubeWidth), -cubeY,  zBuff, charBuff, mainCube, ':');
+                calcSurface(cubeX, mainCube->cubeWidth, cubeY,  zBuff, charBuff, mainCube, '[');
             }
         }
 
@@ -121,12 +120,12 @@ int main(){
         for (float cubeX = -(mainCube->cubeWidth); cubeX < mainCube->cubeWidth; cubeX += mainCube->acceleration) {
             for (float cubeY = -(mainCube->cubeWidth); cubeY < mainCube->cubeWidth;
                 cubeY += mainCube->acceleration) {
-                calcSurface(cubeX, cubeY, -(mainCube->cubeWidth), zBuff, charBuff, mainCube, '@');
-                calcSurface(mainCube->cubeWidth, cubeY, cubeX,  zBuff, charBuff, mainCube, '$');
-                calcSurface(-(mainCube->cubeWidth), cubeY, -cubeX,  zBuff, charBuff, mainCube, '~');
-                calcSurface(-cubeX, cubeY, mainCube->cubeWidth,  zBuff, charBuff, mainCube, '#');
-                calcSurface(cubeX, -(mainCube->cubeWidth), -cubeY,  zBuff, charBuff, mainCube, ';');
-                calcSurface(cubeX, mainCube->cubeWidth, cubeY,  zBuff, charBuff, mainCube, '+');
+                calcSurface(cubeX, cubeY, -(mainCube->cubeWidth), zBuff, charBuff, mainCube, '-');
+                calcSurface(mainCube->cubeWidth, cubeY, cubeX,  zBuff, charBuff, mainCube, '/');
+                calcSurface(-(mainCube->cubeWidth), cubeY, -cubeX,  zBuff, charBuff, mainCube, '#');
+                calcSurface(-cubeX, cubeY, mainCube->cubeWidth,  zBuff, charBuff, mainCube, '+');
+                calcSurface(cubeX, -(mainCube->cubeWidth), -cubeY,  zBuff, charBuff, mainCube, ':');
+                calcSurface(cubeX, mainCube->cubeWidth, cubeY,  zBuff, charBuff, mainCube, '[');
             }
         }
         printf("\x1b[H");
