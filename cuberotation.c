@@ -42,9 +42,9 @@ void calcSurface(float cubeX, float cubeY, float cubeZ, float* zBuff, char* char
     mainCube->y = calcY(cubeX, cubeY, cubeZ);
     mainCube->z = calcZ(cubeX, cubeY, cubeZ) + mainCube->FOV;
 
-    mainCube->ooz = 1 / mainCube->z;
+    mainCube->ooz = 1 / mainCube->z; //inverse of z
 
-    mainCube->xPos = (int)(mainCube->width / 2 + mainCube->xOffset + mainCube->K1 * mainCube->ooz * mainCube->x * 2);
+    mainCube->xPos = (int)(mainCube->width / 2 + mainCube->xOffset + mainCube->K1 * mainCube->ooz * mainCube->x * 2); //calculate where this cube should be printed
     mainCube->yPos = (int)(mainCube->height / 2 + mainCube->K1 * mainCube->ooz * mainCube->y);
 
     mainCube->idx = mainCube->xPos + mainCube->yPos * mainCube->width;
@@ -76,8 +76,8 @@ int main(){
         mainCube->cubeWidth = origCubeWidth;
         mainCube->xOffset = -3 * mainCube->cubeWidth;
         
-        for (float cubeX = -(mainCube->cubeWidth); cubeX < mainCube->cubeWidth; cubeX += mainCube->acceleration) {
-            for (float cubeY = -(mainCube->cubeWidth); cubeY < mainCube->cubeWidth;
+        for (float cubeX = -(mainCube->cubeWidth); cubeX < mainCube->cubeWidth; cubeX += mainCube->acceleration) { //Place x "side"
+            for (float cubeY = -(mainCube->cubeWidth); cubeY < mainCube->cubeWidth; //Place y "side"
                 cubeY += mainCube->acceleration) {
                 calcSurface(cubeX, cubeY, -(mainCube->cubeWidth), zBuff, charBuff, mainCube, '-');
                 calcSurface(mainCube->cubeWidth, cubeY, cubeX,  zBuff, charBuff, mainCube, '/');
