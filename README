@@ -1,0 +1,6 @@
+Welcome to cuberotation!
+
+Compile using make, then run using cuberotation.o
+Data structures include: string, trig functions, cube, floats, and ints.
+This project uses a projection matrix and rotation matrices to create a 3D spinning cube! For fun, 
+ASCII characters are filled in.
